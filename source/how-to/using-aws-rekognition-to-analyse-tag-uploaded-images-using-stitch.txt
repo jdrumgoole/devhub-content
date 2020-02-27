@@ -44,7 +44,7 @@
    * Realm
    * MongoDB
 
-.. atf-image:: /img/heros/how-to-write-an-article.png
+* .. atf-image:: /img/heros/how-to-write-an-article.png
 
 .. related::
 
