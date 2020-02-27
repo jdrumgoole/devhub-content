@@ -60,7 +60,7 @@
 Using AWS Rekognition to Analyse and Tag Uploaded Images Using Stitch
 ================
 
-..content::
+.. content::
 
    Computers can now look at a video or image and know what's going on and,
    sometimes, who's in it. Amazon Web Service Rekognition gives your
