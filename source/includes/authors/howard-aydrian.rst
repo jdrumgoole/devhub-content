@@ -1,5 +1,5 @@
 .. author::
    :name: Aydrian Howard
-   :image: /images/bio-generic.png
+   :image: /images/bio-generic.jpg
 
    Aydrian Howard
