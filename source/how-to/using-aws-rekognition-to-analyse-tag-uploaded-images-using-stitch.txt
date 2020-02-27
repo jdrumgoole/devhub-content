@@ -81,33 +81,33 @@ Using AWS Rekognition to Analyse and Tag Uploaded Images Using Stitch
    I set up a trigger that executed a function after an image was uploaded
    to my S3 bucket and its metadata was inserted into a collection.
 
-.. code-block:: javascript
+   .. code-block:: javascript
 
-   exports = function(changeEvent) {
-     const aws = context.services.get('AWS');
-     const mongodb = context.services.get("mongodb-atlas");
-     const insertedPic = changeEvent.fullDocument;
+      exports = function(changeEvent) {
+        const aws = context.services.get('AWS');
+        const mongodb = context.services.get("mongodb-atlas");
+        const insertedPic = changeEvent.fullDocument;
 
-     const args = {
-       Image: {
-         S3Object: {
-           Bucket: insertedPic.s3.bucket,
-           Name: insertedPic.s3.key
-         }
-       },
-       MaxLabels: 10,
-       MinConfidence: 75.0
-     };
+        const args = {
+          Image: {
+            S3Object: {
+              Bucket: insertedPic.s3.bucket,
+              Name: insertedPic.s3.key
+            }
+          },
+          MaxLabels: 10,
+          MinConfidence: 75.0
+        };
 
-     return aws.rekognition()
-       .DetectLabels(args)
-       .then(result => {
-         return mongodb
-           .db('data')
-           .collection('picstream')
-           .updateOne({_id: insertedPic._id}, {$set: {tags: result.Labels}});
-       });
-   };
+        return aws.rekognition()
+          .DetectLabels(args)
+          .then(result => {
+            return mongodb
+              .db('data')
+              .collection('picstream')
+              .updateOne({_id: insertedPic._id}, {$set: {tags: result.Labels}});
+          });
+      };
 
    With just a couple of service calls, I was able to take an image, stored
    in S3, analyse it with Rekognition, and add the tags to its document.
