@@ -6,15 +6,15 @@
 
 .. meta-description::
 
-   meta description (160 characters or fewer)
+   Use MongoDB Stitch with AWS Rekognition to tag and analyse images.
 
 .. twitter::
    :site: @mongodb
    :creator: @aydrianh
-   :title: Wordswordswords
-   :image: </path/to/image>
+   :title: Using AWS Rekognition to Analyse and Tag Uploaded Images Using Stitch
 
-   Description of max 200 characters
+
+   Use MongoDB Stitch with AWS Rekognition to tag and analyse images.
 
 .. ---------------------------------------------------------------
 .. ARTICLE METADATA FIELDS (TO POPULATE FILTERS AND ARTICLE PAGE)
@@ -32,7 +32,6 @@
 
 .. tags::
 
-   * Stitch
    * AWS
 
 .. languages::
@@ -41,16 +40,9 @@
 
 .. products::
 
-   * Realm
-   * MongoDB
+   * Stitch
 
-* .. atf-image:: /img/heros/how-to-write-an-article.png
-
-.. related::
-
-   * ``list of related articles``
-   * ``:doc:`/path/to/article```
-   * ``:doc:`/path/to/other/article```
+.. .. atf-image:: /img/heros/how-to-write-an-article.png
 
 .. ---------------------------------------------------------------
 .. ARTICLE CONTENT
