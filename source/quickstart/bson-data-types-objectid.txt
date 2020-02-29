@@ -54,6 +54,7 @@ Quick Start: BSON Data Types - ObjectId
 
    .. image:: /images/qs-badges/qs-badge-bson.png
       :alt: BSON Quickstart badge
+      :scale: 50%
       :align: right
 
    In the database world, it is frequently important to have unique
